@@ -1,0 +1,33 @@
+{
+	"name": "ujsx",
+	"version": "1.0.0",
+	"author": {
+		"email": "danko@very.lv",
+		"name": "Danko Alexeyev",
+		"url": "http://very.lv"
+	},
+	"description": "µJSX - a trivial JSX-to-DOM/HTML processor",
+	"keywords": [
+		"dom",
+		"jsx"
+	],
+	"main": "./dist/ujsx.js",
+	"types": "./dist/ujsx.d.ts",
+	"module": "./dist/ujsx.mjs",
+	"scripts": {
+		"build": "npx tsc-both && npx webpack --display errors-only",
+		"prepare": "npm run build"
+	},
+	"repository": {
+		"url": "https://bitbucket.org/verypositive/ujsx",
+		"type": "hg"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"source-map-loader": "^0.2.3",
+		"tsc-both": "0.1.x",
+		"typescript": "^2.9.2",
+		"webpack": "^4.11.1",
+		"webpack-cli": "^3.0.3"
+	}
+}
