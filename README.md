@@ -1,6 +1,6 @@
 # µJSX
 
-µJSX is a trivial JSX-to-DOM/HTML processor.\
+µJSX is a trivial JSX-to-DOM/HTML processor.
 It can be used with TypeScript or JavaScript,
 in browser, on server or with a custom DOM context (like jsdom).
 
