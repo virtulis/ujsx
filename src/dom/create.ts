@@ -51,6 +51,7 @@ export function createDOMElement(ctx: UJSXDOMContext, tag: string, attributes: {
 	}
 	else if (children) {
 		for (let cel of flatten(children)) {
+			if (cel === undefined || cel === null || cel as any === false) continue;
 			if (isDOMNode(ctx, cel)) el.appendChild(cel);
 			else if (isUJSXObject(cel)) el.appendChild(ujsxObjectToDOM(ctx, cel));
 			else el.appendChild(document.createTextNode(cel + ''));

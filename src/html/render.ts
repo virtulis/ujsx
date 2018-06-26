@@ -91,9 +91,10 @@ function stringify(uo: UJSX, ctx: UJSXExtractedDOMContext | UJSXNoDOMContext): S
 	const efun = uo.tag == 'script' ? script : html;
 
 	const safechs = dangerous === void 0 ? flatten<UJSX>(uo.children).map(c => {
+		if (c === undefined || c === null || c as any === false) return '';
 		if (typeof c == 'string') return efun(c);
 		return stringify(c, ctx);
-	}) : null;
+	}) as StringArray : null;
 
 	if (voidTags[uo.tag] && dangerous === void 0 && !safechs!.length) return ['<', uo.tag, apairs.join(''), ' />'];
 
