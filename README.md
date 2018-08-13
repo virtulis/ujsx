@@ -45,6 +45,10 @@ to HTML or DOM with two functions defined below.
 Note that if there is a DOM context
 you can also pass DOM nodes as children.
 
+`tag` can also be a function that accepts and object containing
+all atributes (with children in an array at `children` key).
+Its return value is passed to caller verbatim.
+
 ### ujsxToHTML(ujsx)
 
 Converts anything that its sibling `ujsx()` can return to a HTML string.
@@ -82,6 +86,11 @@ by checking for `tag`, `attributes` and `children` properties).
 Explicitly creates an intermediate object even if DOM is present.
 (this is what `ujsx()` falls back to if there is no `window`).
 
+### domToUJSX(node)
+
+Convert a DOM node (Element, TextNode, Document or DocumentFragment)
+to an implementation-agnostic UJSX intermediate object.
+
 
 ## Intermediate object
 
@@ -97,6 +106,10 @@ Explicitly creates an intermediate object even if DOM is present.
 It's safe to modify this object in any way possible.
 You can also deep clone it or create it manually
 as long as all three keys are present and not void.
+
+Intermediate objects are not attached to specific DOM context
+and can therefore be used to migrate nodes between different DOM trees
+and implementations.
 
 
 ## Usage with TypeScript in .tsx files

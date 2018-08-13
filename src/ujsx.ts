@@ -5,6 +5,7 @@ import { ujsxFor } from './bind';
 import { isUJSXObject, createUJSXObject, UJSXObject } from './common/object';
 import { UJSX, UJSXArray, UJSXHandler } from './common/types';
 import { UJSXDOMContextParam } from './dom/context';
+import { domToUJSX } from './dom/convert';
 
 const w = typeof window !== 'undefined' ? window : undefined;
 const auto = ujsxFor({ window: w });
@@ -26,6 +27,8 @@ export {
 	auto,
 	ujsx,
 	ujsxToDOM,
-	ujsxToHTML
+	ujsxToHTML,
+
+	domToUJSX
 
 };
