@@ -30,6 +30,12 @@ const voidTags: { [key: string]: boolean } = {
 function html(s: string) {
 	return s
 		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;');
+}
+
+function attr(s: string) {
+	return s
+		.replace(/&/g, '&amp;')
 		.replace(/</g, '&lt;')
 		.replace(/>/g, '&gt;')
 		.replace(/"/g, '&quot;')
@@ -85,7 +91,7 @@ function stringify(uo: UJSX, ctx: UJSXExtractedDOMContext | UJSXNoDOMContext): S
 		else {
 			val = rval === true ? key : rval + '';
 		}
-		apairs.push(' ' + html(key) + '="' + html(val) + '"');
+		apairs.push(' ' + attr(key) + '="' + attr(val) + '"');
 	}
 
 	const efun = uo.tag == 'script' ? script : html;
