@@ -83,6 +83,22 @@ Explicitly creates an intermediate object even if DOM is present.
 (this is what `ujsx()` falls back to if there is no `window`).
 
 
+## Intermediate object
+
+    interface UJSXObject {
+        // tag name, lowercase
+        tag: string;
+        // attribute map, lowercase names
+        attributes: { [key: string]: any };
+        // children (UJSXObject, Element, string, etc)
+        children: any[];
+    }
+
+It's safe to modify this object in any way possible.
+You can also deep clone it or create it manually
+as long as all three keys are present and not void.
+
+
 ## Usage with TypeScript in .tsx files
 
     {
