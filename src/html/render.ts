@@ -52,7 +52,7 @@ function stringify(uo: UJSX, ctx: UJSXExtractedDOMContext | UJSXNoDOMContext): S
 		return uo.outerHTML;
 	}
 	if (Array.isArray(uo)) {
-		return uo.map(el => stringify(uo, ctx));
+		return uo.map(el => stringify(el, ctx));
 	}
 
 	if (!isUJSXObject(uo)) return String(uo);
