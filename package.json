@@ -6,7 +6,7 @@
 		"name": "Danko Alexeyev",
 		"url": "http://very.lv"
 	},
-	"description": "µJSX - a trivial JSX-to-DOM/HTML processor",
+	"description": "microJSX (µJSX) - a trivial JSX-to-DOM/HTML processor",
 	"keywords": [
 		"dom",
 		"jsx"
