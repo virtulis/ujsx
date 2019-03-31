@@ -130,7 +130,7 @@ and implementations.
 If you think there's something wrong or something is missing,
 please contact me :)
 
- * [Issue tracker](https://bitbucket.org/verypositive/ujsx/issues)
+ * [Issue tracker](https://github.com/virtulis/ujsx/issues)
  * [Email](mailto:danko@very.lv)
 
 

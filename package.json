@@ -19,8 +19,8 @@
 		"prepare": "npm run build"
 	},
 	"repository": {
-		"url": "https://bitbucket.org/verypositive/ujsx",
-		"type": "hg"
+		"url": "https://github.com/virtulis/ujsx.git",
+		"type": "git"
 	},
 	"license": "MIT",
 	"devDependencies": {
