@@ -3,4 +3,5 @@ webpack.config.js
 .hgignore
 .hgtags
 .idea
+.babelrc
 *.tgz
