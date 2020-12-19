@@ -1,5 +1,5 @@
 module.exports = {
-	entry: './dist/global.mjs',
+	entry: './src/global.ts',
 	output: {
 		filename: 'ujsx.bundle.js',
 		path: __dirname + '/dist',
@@ -7,11 +7,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.m?js$/,
-				use: ['source-map-loader'],
-				enforce: 'pre'
-			}
+				test: /\.ts$/,
+				loader: 'babel-loader',
+			},
 		]
+	},
+	resolve: {
+		extensions: ['.ts', '.mjs', '.js', '.json'],
 	},
 	devtool: 'source-map',
 	mode: 'production'
